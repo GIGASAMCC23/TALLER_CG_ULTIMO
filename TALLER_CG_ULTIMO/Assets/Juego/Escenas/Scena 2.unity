@@ -1816,6 +1816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiamanteMalo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6857932901159649908, guid: 0ee1ea7e8ce918c459b02e641522102a, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2665,6 +2669,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2191666470857331508, guid: 8b63f536dcb9512418bb18c53c2565c6, type: 3}
   m_PrefabInstance: {fileID: 176882864}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &180780355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180780357}
+  - component: {fileID: 180780356}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &180780356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180780355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e56f794085299b47bb93ae38599dc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneMusic
+  musicClip: {fileID: 8300000, guid: 17d56f190c3178444a9fd220d3017b9f, type: 3}
+--- !u!4 &180780357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180780355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.59634, y: 108.76687, z: 37.61941}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &181076035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2717,6 +2766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubieBueno (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5028469044561930780, guid: 4feb677dd84192649b4a244e84c06e6c, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8844,6 +8897,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6050079582636469706, guid: 4f3067b6d54fa2a4a91ebf71e115797f, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11275,6 +11332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarBuena (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5052599575852368364, guid: 6bcecfc5e23a40a46a7f103643b4449c, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16814,6 +16875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiamanteMalo
       objectReference: {fileID: 0}
+    - target: {fileID: 6857932901159649908, guid: 0ee1ea7e8ce918c459b02e641522102a, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17616,6 +17681,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3549019013119128763, guid: e9ce1222c0c0d0947bdf736210253f27, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19777,6 +19846,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3549019013119128763, guid: e9ce1222c0c0d0947bdf736210253f27, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20997,6 +21070,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3549019013119128763, guid: e9ce1222c0c0d0947bdf736210253f27, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21381,6 +21458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubieBueno
       objectReference: {fileID: 0}
+    - target: {fileID: 5028469044561930780, guid: 4feb677dd84192649b4a244e84c06e6c, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22097,6 +22178,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1675575005}
     m_Modifications:
+    - target: {fileID: 147357134153371122, guid: 876d27bf6f6f99546a35135e6be63e00, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     - target: {fileID: 2342485957155860687, guid: 876d27bf6f6f99546a35135e6be63e00, type: 3}
       propertyPath: m_Name
       value: DoubleDiamondBueno
@@ -22393,6 +22478,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3549019013119128763, guid: e9ce1222c0c0d0947bdf736210253f27, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22792,6 +22881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiamanteMalo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6857932901159649908, guid: 0ee1ea7e8ce918c459b02e641522102a, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23338,6 +23431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubieBueno (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5028469044561930780, guid: 4feb677dd84192649b4a244e84c06e6c, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24948,6 +25045,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3549019013119128763, guid: e9ce1222c0c0d0947bdf736210253f27, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25095,6 +25196,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1675575005}
     m_Modifications:
+    - target: {fileID: 854005333487209519, guid: 7afe0c32f51fc6049b2ecdd579df166c, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     - target: {fileID: 1473735827771461240, guid: 7afe0c32f51fc6049b2ecdd579df166c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.21
@@ -28920,6 +29025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubieBueno (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5028469044561930780, guid: 4feb677dd84192649b4a244e84c06e6c, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29195,6 +29304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarMala
       objectReference: {fileID: 0}
+    - target: {fileID: 7306852369796274936, guid: 52a996d5f3f1cb44ba3494fe92b8bcaf, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30057,6 +30170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarBuena
       objectReference: {fileID: 0}
+    - target: {fileID: 5052599575852368364, guid: 6bcecfc5e23a40a46a7f103643b4449c, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30642,6 +30759,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3549019013119128763, guid: e9ce1222c0c0d0947bdf736210253f27, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31259,6 +31380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubieBueno (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5028469044561930780, guid: 4feb677dd84192649b4a244e84c06e6c, type: 3}
+      propertyPath: collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cb35282564b48642a4e41a814936876, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31576,3 +31701,4 @@ SceneRoots:
   - {fileID: 1675575005}
   - {fileID: 1296162560}
   - {fileID: 857128818}
+  - {fileID: 180780357}
