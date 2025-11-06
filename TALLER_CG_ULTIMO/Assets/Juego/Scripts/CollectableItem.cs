@@ -1,4 +1,4 @@
-ï»¿using UnityEngine;
+using UnityEngine;
 
 public class CollectableItem : MonoBehaviour
 {
@@ -6,38 +6,53 @@ public class CollectableItem : MonoBehaviour
     public ItemType itemType;
 
     public int itemValue = 1;
+    private AudioSource audioSource;
+    private Renderer rend;
+    private Collider coll;
+    private bool collected = false;
 
-    public AudioClip collectSound; 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        rend = GetComponent<Renderer>();
+        coll = GetComponent<Collider>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (collected) return; // evita doble recolección
+
         if (other.CompareTag("Player"))
         {
+            collected = true;
             CollectItem();
         }
     }
 
     void CollectItem()
     {
+       
         if (GameManager.Instance != null)
         {
             if (itemType == ItemType.Bueno)
-            {
                 GameManager.Instance.addScore(itemValue);
-            }
             else
-            {
                 GameManager.Instance.addScore(-itemValue);
-            }
         }
+
+        
+        if (rend != null)
+            rend.enabled = false;
+        if (coll != null)
+            coll.enabled = false;
+
+     
+        if (audioSource != null && audioSource.clip != null)
+            audioSource.Play();
 
         Debug.Log($"Item recogido: {itemType}. Valor aplicado: {itemValue}");
 
-        if (collectSound != null)
-        {
-            AudioSource.PlayClipAtPoint(collectSound, transform.position);
-        }
-
-        Destroy(gameObject);
+       
+        Destroy(gameObject, audioSource != null && audioSource.clip != null ? audioSource.clip.length : 0f);
     }
 }
