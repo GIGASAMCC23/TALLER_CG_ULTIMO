@@ -29,6 +29,11 @@ public class PlayerRespawn : MonoBehaviour
         if (other.CompareTag("DeathZone"))
         {
             GameManager.Instance.AddFall();
+
+            ControllerScene2 controllerScene = FindObjectOfType<ControllerScene2>();
+            if (controllerScene != null)
+                controllerScene.ActualizarTextoCaidas();
+
             Respawn();
         }
     }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public int fallCount = 0;
+    public static event Action OnFallAdded;
 
     private void Awake()
     {
@@ -35,6 +37,8 @@ public class GameManager : MonoBehaviour
     {
         fallCount++;
         Debug.Log("Caídas totales: " + fallCount);
+
+        OnFallAdded?.Invoke();
     }
 
     public void GuardarTiempoEscena1(float tiempo)

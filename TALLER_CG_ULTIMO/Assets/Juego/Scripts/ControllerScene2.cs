@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class ControllerScene2 : MonoBehaviour
 {
     [Header("Referencias")]
     public Timer timerEscena2;
+
+    [Header("UI")]
+    public Text textCaidas; // ← referencia al TextCaidas
 
     void Start()
     {
@@ -20,6 +25,53 @@ public class ControllerScene2 : MonoBehaviour
         else
         {
             Debug.LogError("✗ NO se encontró ningún Timer en la escena");
+        }
+
+        // Buscar automáticamente el texto de caídas si no está asignado
+        if (textCaidas == null)
+        {
+            GameObject textObj = GameObject.Find("TextCaidas");
+            if (textObj != null)
+                textCaidas = textObj.GetComponent<Text>();
+        }
+
+        ActualizarTextoCaidas();
+    }
+    void OnEnable()
+    {
+        // 🔹 Escucha el evento de GameManager
+        GameManager.OnFallAdded += ActualizarTextoCaidas;
+    }
+
+    void OnDisable()
+    {
+        // 🔹 Deja de escuchar cuando se desactive
+        GameManager.OnFallAdded -= ActualizarTextoCaidas;
+    }
+
+
+
+
+
+
+
+    public void ActualizarTextoCaidas()
+    {
+        if (textCaidas != null && GameManager.Instance != null)
+        {
+            textCaidas.text = GameManager.Instance.fallCount.ToString();
+            StartCoroutine(FlashTextCaidas()); // efecto visual corto
+        }
+    }
+
+    private IEnumerator FlashTextCaidas()
+    {
+        if (textCaidas != null)
+        {
+            Color originalColor = textCaidas.color;
+            textCaidas.color = Color.red;
+            yield return new WaitForSeconds(0.2f);
+            textCaidas.color = originalColor;
         }
     }
 
