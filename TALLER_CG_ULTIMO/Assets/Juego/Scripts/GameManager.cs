@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public int fallCount = 0;
     public static event Action OnFallAdded;
-
+    public static event Action OnScoreChanged;
     private void Awake()
     {
         
@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
         Debug.Log("Puntaje actual: " + score);
+        OnScoreChanged?.Invoke();
     }
 
     public void AddFall()

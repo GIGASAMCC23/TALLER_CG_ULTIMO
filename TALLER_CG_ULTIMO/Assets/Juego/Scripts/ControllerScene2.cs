@@ -1,66 +1,69 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ControllerScene2 : MonoBehaviour
 {
-   
     public Timer timerEscena2;
     public TMP_Text textCaidas;
-   
+    public TMP_Text textScore; // Nuevo: texto para score
+
     void Start()
     {
+        // Buscar el Timer si no se asignó manualmente
         if (timerEscena2 == null)
         {
-            Debug.LogError(" Timer Escena2 está NULL en el Start - Intentando buscar automáticamente...");
             timerEscena2 = FindObjectOfType<Timer>();
+            if (timerEscena2 == null)
+                Debug.LogError("✗ No se encontró ningún Timer en la escena");
         }
 
-        if (timerEscena2 != null)
-        {
-            Debug.Log("✓ Timer encontrado: " + timerEscena2.gameObject.name);
-        }
-        else
-        {
-            Debug.LogError(" NO se encontró ningún Timer en la escena");
-        }
-
-        
+        // Buscar textos automáticamente si no se asignaron
         if (textCaidas == null)
         {
             GameObject textObj = GameObject.Find("TextCaidas");
             if (textObj != null)
                 textCaidas = textObj.GetComponent<TMP_Text>();
-
         }
 
+        if (textScore == null)
+        {
+            GameObject scoreObj = GameObject.Find("TextScore"); // asegúrate de que el objeto en la escena tenga este nombre
+            if (scoreObj != null)
+                textScore = scoreObj.GetComponent<TMP_Text>();
+        }
+
+        // Actualizar UI inicial
         ActualizarTextoCaidas();
+        ActualizarTextoScore();
     }
+
     void OnEnable()
     {
-       
         GameManager.OnFallAdded += ActualizarTextoCaidas;
+        GameManager.OnScoreChanged += ActualizarTextoScore;
     }
 
     void OnDisable()
     {
-        
         GameManager.OnFallAdded -= ActualizarTextoCaidas;
+        GameManager.OnScoreChanged -= ActualizarTextoScore;
     }
-
-
-
-
-
-
 
     public void ActualizarTextoCaidas()
     {
         if (textCaidas != null && GameManager.Instance != null)
         {
             textCaidas.text = GameManager.Instance.fallCount.ToString();
-            StartCoroutine(FlashTextCaidas()); // efecto visual corto
+            StartCoroutine(FlashTextCaidas());
+        }
+    }
+
+    public void ActualizarTextoScore()
+    {
+        if (textScore != null && GameManager.Instance != null)
+        {
+            textScore.text = GameManager.Instance.score.ToString();
         }
     }
 
@@ -77,36 +80,19 @@ public class ControllerScene2 : MonoBehaviour
 
     public void FinalizarEscena2()
     {
-        Debug.Log("--- FinalizarEscena2 llamado ---");
-
         if (timerEscena2 == null)
         {
-            Debug.LogError("✗ timerEscena2 es NULL");
             timerEscena2 = FindObjectOfType<Timer>();
-
-            if (timerEscena2 == null)
-            {
-                Debug.LogError("✗ Tampoco se pudo encontrar con FindObjectOfType");
-                return;
-            }
+            if (timerEscena2 == null) return;
         }
 
-        Debug.Log("✓ Timer encontrado, intentando detener...");
         timerEscena2.TimerStop();
-
-        Debug.Log("Timer detenido, obteniendo tiempo...");
         float tiempoFinal = timerEscena2.StopTime;
-
-        Debug.Log(" Tiempo obtenido: " + tiempoFinal);
 
         if (GameManager.Instance != null)
         {
             GameManager.Instance.GuardarTiempoEscena2(tiempoFinal);
-            Debug.Log("Tiempo guardado en GameManager");
-        }
-        else
-        {
-            Debug.LogError(" GameManager.Instance es NULL");
         }
     }
 }
+
