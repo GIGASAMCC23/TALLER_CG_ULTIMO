@@ -1,12 +1,15 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
     private Renderer rend;
+    private AudioSource audioSource;
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
+        audioSource = GetComponent<AudioSource>();
+
         if (rend != null)
             rend.material.color = Color.red;
     }
@@ -24,7 +27,12 @@ public class Checkpoint : MonoBehaviour
                 // Cambia el color visual del checkpoint activo
                 if (rend != null)
                     rend.material.color = Color.green;
+
+                // 🔊 Reproduce el sonido al activar el checkpoint
+                if (audioSource != null)
+                    audioSource.Play();
             }
         }
     }
 }
+
