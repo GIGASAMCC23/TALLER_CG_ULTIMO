@@ -3,19 +3,23 @@ using TMPro;
 public class LoaderScene1 : MonoBehaviour
 {
      public TMP_Text scoreText;
-
+    public TMP_Text caidasText;
     void Start()
     {
-        UpdateScoreUI();
+        UpdateUI();
     }
 
     void Update()
     {
-        UpdateScoreUI();  
+        UpdateUI();
     }
 
-    public void UpdateScoreUI()
+    void UpdateUI()
     {
-        scoreText.text =  GameManager.Instance.score.ToString();
+        if (scoreText != null)
+            scoreText.text =  GameManager.Instance.score.ToString();
+
+        if (caidasText != null)
+            caidasText.text =  GameManager.Instance.fallCount.ToString();
     }
 }

@@ -8,10 +8,7 @@ public class LoaderScene : MonoBehaviour
         SceneManager.LoadScene("Scena 1");
     }
 
-    public void IniciarEscena2()
-    {
-        SceneManager.LoadScene("Scena 2");
-    }
+    
     public void SalirJuego()
     {
         Debug.Log("Saliendo del game..");

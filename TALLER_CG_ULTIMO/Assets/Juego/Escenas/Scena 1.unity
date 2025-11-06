@@ -1007,7 +1007,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8282453734043031796, guid: d2be97095b8b6714481f3b961928dd87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1340887405}
+    - targetCorrespondingSourceObject: {fileID: 8282453734043031796, guid: d2be97095b8b6714481f3b961928dd87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1340887404}
   m_SourcePrefab: {fileID: 100100000, guid: d2be97095b8b6714481f3b961928dd87, type: 3}
 --- !u!4 &86741438 stripped
 Transform:
@@ -3337,7 +3343,7 @@ MonoBehaviour:
   moveSpeed: 5
   rotationSpeed: 100
   gravity: -9.81
-  jumpForce: 5
+  jumpForce: 8
   mouseOrbitCamera: {fileID: 1246890104}
 --- !u!143 &341786120
 CharacterController:
@@ -6592,6 +6598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   score: 0
+  fallCount: 0
 --- !u!4 &678939976
 Transform:
   m_ObjectHideFlags: 0
@@ -9035,6 +9042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoaderScene1
   scoreText: {fileID: 764858242}
+  caidasText: {fileID: 1274229418}
 --- !u!4 &967252548
 Transform:
   m_ObjectHideFlags: 0
@@ -10710,6 +10718,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1462465216442498118, guid: 0ee1ea7e8ce918c459b02e641522102a, type: 3}
   m_PrefabInstance: {fileID: 689883214}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1196861144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8282453734043031796, guid: d2be97095b8b6714481f3b961928dd87, type: 3}
+  m_PrefabInstance: {fileID: 82242730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1198496451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11861,6 +11874,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 657906292706535316, guid: d2be97095b8b6714481f3b961928dd87, type: 3}
   m_PrefabInstance: {fileID: 82242730}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1340887404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196861144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5647ade602d5bfd4687de25cb92e3a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PasarEscenaDos
+--- !u!65 &1340887405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196861144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.67600006, y: 1.9808087, z: 3.5604382}
+  m_Center: {x: 0, y: 0.9877695, z: 0.00032782558}
 --- !u!4 &1347649108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1788603879022669767, guid: bcdb601ee0e1144478b160e8530cefa2, type: 3}
@@ -17726,7 +17772,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1097481449707835360, guid: 186a8d9264fb5ee4bb4b0b5a4af78407, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -10.7
       objectReference: {fileID: 0}
     - target: {fileID: 1097481449707835360, guid: 186a8d9264fb5ee4bb4b0b5a4af78407, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17734,7 +17780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1097481449707835360, guid: 186a8d9264fb5ee4bb4b0b5a4af78407, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -45.52
+      value: -44.3
       objectReference: {fileID: 0}
     - target: {fileID: 1097481449707835360, guid: 186a8d9264fb5ee4bb4b0b5a4af78407, type: 3}
       propertyPath: m_LocalRotation.w
