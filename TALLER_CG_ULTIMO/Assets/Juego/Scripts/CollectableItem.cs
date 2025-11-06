@@ -1,11 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CollectableItem : MonoBehaviour
 {
-    public enum ItemType { Bueno, Malo }  
-    public ItemType itemType;             
+    public enum ItemType { Bueno, Malo }
+    public ItemType itemType;
 
-    public int itemValue = 1;            
+    public int itemValue = 1;
+
+    public AudioClip collectSound; 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -16,22 +19,25 @@ public class CollectableItem : MonoBehaviour
 
     void CollectItem()
     {
-      
         if (GameManager.Instance != null)
         {
-            
             if (itemType == ItemType.Bueno)
             {
                 GameManager.Instance.addScore(itemValue);
             }
-            else 
+            else
             {
                 GameManager.Instance.addScore(-itemValue);
             }
         }
 
         Debug.Log($"Item recogido: {itemType}. Valor aplicado: {itemValue}");
+
+        if (collectSound != null)
+        {
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+        }
+
         Destroy(gameObject);
     }
 }
-
