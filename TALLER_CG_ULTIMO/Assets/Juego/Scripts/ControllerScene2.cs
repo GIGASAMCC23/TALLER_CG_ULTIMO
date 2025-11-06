@@ -1,20 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class ControllerScene2 : MonoBehaviour
 {
-    [Header("Referencias")]
+   
     public Timer timerEscena2;
-
-    [Header("UI")]
-    public Text textCaidas; // ← referencia al TextCaidas
-
+    public TMP_Text textCaidas;
+   
     void Start()
     {
         if (timerEscena2 == null)
         {
-            Debug.LogError("⚠️ Timer Escena2 está NULL en el Start - Intentando buscar automáticamente...");
+            Debug.LogError(" Timer Escena2 está NULL en el Start - Intentando buscar automáticamente...");
             timerEscena2 = FindObjectOfType<Timer>();
         }
 
@@ -24,28 +23,29 @@ public class ControllerScene2 : MonoBehaviour
         }
         else
         {
-            Debug.LogError("✗ NO se encontró ningún Timer en la escena");
+            Debug.LogError(" NO se encontró ningún Timer en la escena");
         }
 
-        // Buscar automáticamente el texto de caídas si no está asignado
+        
         if (textCaidas == null)
         {
             GameObject textObj = GameObject.Find("TextCaidas");
             if (textObj != null)
-                textCaidas = textObj.GetComponent<Text>();
+                textCaidas = textObj.GetComponent<TMP_Text>();
+
         }
 
         ActualizarTextoCaidas();
     }
     void OnEnable()
     {
-        // 🔹 Escucha el evento de GameManager
+       
         GameManager.OnFallAdded += ActualizarTextoCaidas;
     }
 
     void OnDisable()
     {
-        // 🔹 Deja de escuchar cuando se desactive
+        
         GameManager.OnFallAdded -= ActualizarTextoCaidas;
     }
 
@@ -94,19 +94,19 @@ public class ControllerScene2 : MonoBehaviour
         Debug.Log("✓ Timer encontrado, intentando detener...");
         timerEscena2.TimerStop();
 
-        Debug.Log("✓ Timer detenido, obteniendo tiempo...");
+        Debug.Log("Timer detenido, obteniendo tiempo...");
         float tiempoFinal = timerEscena2.StopTime;
 
-        Debug.Log("✓ Tiempo obtenido: " + tiempoFinal);
+        Debug.Log(" Tiempo obtenido: " + tiempoFinal);
 
         if (GameManager.Instance != null)
         {
             GameManager.Instance.GuardarTiempoEscena2(tiempoFinal);
-            Debug.Log("✓ Tiempo guardado en GameManager");
+            Debug.Log("Tiempo guardado en GameManager");
         }
         else
         {
-            Debug.LogError("✗ GameManager.Instance es NULL");
+            Debug.LogError(" GameManager.Instance es NULL");
         }
     }
 }
