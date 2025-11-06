@@ -3963,7 +3963,7 @@ MonoBehaviour:
   moveSpeed: 20
   rotationSpeed: 100
   gravity: -9.81
-  jumpForce: 20
+  jumpForce: 8
   mouseOrbitCamera: {fileID: 63022405}
 --- !u!143 &269723909
 CharacterController:
