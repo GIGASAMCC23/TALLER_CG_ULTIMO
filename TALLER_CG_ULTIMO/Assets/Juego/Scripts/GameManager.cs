@@ -4,8 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public int score = 0;   
-
+    public int score = 0;
+    public int fallCount = 0;
 
     private void Awake()
     {
@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
         Debug.Log("Puntaje actual: " + score);
+    }
+
+    public void AddFall()
+    {
+        fallCount++;
+        Debug.Log("Caídas totales: " + fallCount);
     }
 }
 

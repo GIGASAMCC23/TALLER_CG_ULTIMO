@@ -28,6 +28,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (other.CompareTag("DeathZone"))
         {
+            GameManager.Instance.AddFall();
             Respawn();
         }
     }
