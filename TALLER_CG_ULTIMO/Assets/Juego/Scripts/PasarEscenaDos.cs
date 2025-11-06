@@ -7,9 +7,15 @@ public class PasarEscenaDos : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Scena 2");
             
+            Timer timer = FindObjectOfType<Timer>();
+            if (timer != null)
+            {
+                timer.TimerStop();
+                GameManager.Instance.GuardarTiempoEscena1(timer.StopTime);
+            }
+
+            SceneManager.LoadScene("Scena 2");
         }
     }
-
 }
