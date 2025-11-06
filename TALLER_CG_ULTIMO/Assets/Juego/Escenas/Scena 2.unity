@@ -8689,15 +8689,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2242426181526994873, guid: d13ca149aa1f1c4409fa3fcfab258e81, type: 3}
       propertyPath: gravity
-      value: -20
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 2242426181526994873, guid: d13ca149aa1f1c4409fa3fcfab258e81, type: 3}
       propertyPath: jumpForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2242426181526994873, guid: d13ca149aa1f1c4409fa3fcfab258e81, type: 3}
       propertyPath: moveSpeed
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2242426181526994873, guid: d13ca149aa1f1c4409fa3fcfab258e81, type: 3}
       propertyPath: mouseOrbitCamera
@@ -30529,7 +30529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1254289601292303803, guid: 4c33c3918e8a12b4289d1124e9ca0c1c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1491958158751749252, guid: 4c33c3918e8a12b4289d1124e9ca0c1c, type: 3}
       propertyPath: m_LocalScale.x
