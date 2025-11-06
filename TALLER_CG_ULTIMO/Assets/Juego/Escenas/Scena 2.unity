@@ -8689,15 +8689,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2242426181526994873, guid: d13ca149aa1f1c4409fa3fcfab258e81, type: 3}
       propertyPath: gravity
-      value: -20
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 2242426181526994873, guid: d13ca149aa1f1c4409fa3fcfab258e81, type: 3}
       propertyPath: jumpForce
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2242426181526994873, guid: d13ca149aa1f1c4409fa3fcfab258e81, type: 3}
       propertyPath: moveSpeed
-      value: 13
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2242426181526994873, guid: d13ca149aa1f1c4409fa3fcfab258e81, type: 3}
       propertyPath: mouseOrbitCamera
